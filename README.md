@@ -28,7 +28,7 @@ git checkout -b elice // 자신의 이름
 1. git 폴더로 cmd 위치를 설정합니다.
 2. 레포지토리를 **클론**해줍니다
 ```git
-git clone https://github.com/Elice-sw4-study/week-01 //레포지토리 주소
+git clone https://github.com/Elice-sw4-study/week-04 //레포지토리 주소
 ```
 3. 생성된 디렉토리에 git에 올릴 파일들을 넣습니다
 4. ⬆️ 위에 보고 브랜치 만들기!
