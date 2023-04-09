@@ -1,0 +1,72 @@
+body {
+    text-align: center;
+    background: #000;
+    background-color: #12181f;
+    color: white;
+}
+
+h1.title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    color:#fff;
+    margin-top: 50px;
+}
+
+h3.score {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.findCard {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(2, calc(140px / 2 * 3));
+    margin: 30px 0;
+}
+
+.actions button {
+    padding: 5px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #27ae60;
+    border:none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card {
+    height: calc(140px / 2 * 3);
+    width: 140px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    /*transition: all 0.5s ease-in-out;*/
+}
+
+.card.back, .card.front {
+    background-position: center center;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+}
+
+.card.back {
+    background-image: url(../assets/bg.png);
+
+}
+
+.card.front {
+    background-size: 70px;
+}
