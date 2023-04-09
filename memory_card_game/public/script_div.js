@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
         {
             name: 'cherries', //카드의 이름
-            img: 'assets/cherries.png' //카드에 들어갈 이미지
+            img: 'assets/cherries.png' //카드에 들어갈 이미지 주소
         }, {
             name: 'cherries',
             img: 'assets/cherries.png'
@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
 
-    //카드의 순서를 섞어줍니다.
+    //카드의 순서를 섞어주기
     cardArray.sort(() => 0.5 - Math.random());
     var grid = document.querySelector('.grid');
     var result = document.querySelector('#result');
     var foundTeam = document.querySelector('.findCard');
     var restart = document.querySelector('.actions > button');
 
-    //밑에 사용할 변수들 입니다.
+    //변수 선언
     var cardChosen = [];
     var cardChosenId = [];
     var cardsWon = [];
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardChosenId = [];
     }
 
-    //flipCard 함수는 카드를 돌려보는 기능을 해준다.
+    //flipCard 함수: 카드를 뒤집는 함수
     let selectedCards = [];
     function flipCard() {
         var cardId = this.getAttribute('id');
@@ -106,12 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
         cardChosenId.push(cardId);
 
         //this로 클릭된 이 카드의 이미지 바꿔주기
-        // 카드를 뒤집어 보여줍니다.
         this.classList.toggle('front');
         this.classList.toggle('back');
         this.style.backgroundImage = `url(${cardArray[cardId].img})`;
 
-        //2개의 카드가 선택됬다면 틀렸는지 맞았는지 알아볼 시간
+        //2개의 카드가 선택됬다면 틀렸는지 맞았는지 
         if (cardChosen.length === 2) {
             //0.5초 뒤에 2개가 같은 카드인지 아닌지 판별하는 checkForMatch 함수 실행
             setTimeout(checkForMatch, 500);
