@@ -1,0 +1,184 @@
+    /* *{
+        margin: 0;
+        padding: 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.score {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+.playground > ul {
+    border: 1px solid #333;
+    width: 250px;
+    margin: 0 auto;
+}
+.playground > ul > li {
+    width: 100%;
+    height: 25px;
+}
+.playground > ul > li > ul {
+    display: flex;
+}
+.playground > ul > li > ul > li {
+    width: 25px;
+    height: 25px;
+    outline: 1px solid #ccc;
+} */
+/* 초기 설정 */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/*점수와 게임종료 텍스트 관련*/
+.score {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 2rem;
+
+}
+
+.game-text {
+    display: none;
+    justify-content: space-around ;
+    align-items: center ;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-size: 50px;
+}
+
+.game-text > button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: salmon;
+    border: none;
+    cursor: pointer;
+}
+
+/*테트리스 게임판*/
+.playground {
+    display: flex;
+    align-items: center;
+    justify-content : space-around; 
+
+}
+
+.wrapper {
+    margin-left: 350px ;
+}
+
+.playground > .wrapper > ul {
+    border : 1px solid  #333;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.playground > .wrapper > ul > li {
+    width: 100%;
+    height: 25px;
+
+}
+
+.playground > .wrapper > ul > li > ul {
+    display: flex;
+
+}
+
+.playground > .wrapper > ul > li > ul > li {
+    width : 25px;
+    height : 25px;
+    outline: 1px solid #ccc;
+    
+}
+
+/*다음 블록 보여주는 부분*/
+.nextblock {
+    margin-right: 500px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nextblock > ul {
+    border : 1px solid  #333;
+    width: 125px;
+    margin: 0 auto;
+}
+
+.nextblock > ul > li {
+    width : 100%;
+    height: 25px;
+}
+
+.nextblock > ul > li > ul {
+    display: flex;
+}
+
+.nextblock > ul > li > ul > li {
+    width : 25px;
+    height : 25px;
+}
+
+
+/*블럭 색깔 지정*/
+.tree {
+    background: #67c23a;
+}
+
+.square {
+    background: #d463b2;
+}
+
+.bar{
+    background: #be632a
+}
+
+.zee {
+    background: #501ddd
+}
+
+.elLeft {
+    background:#dcd919
+}
+
+.elRight {
+    background:#44adcf
+}
+
+#final {
+    text-align: center;
+}
+
+.rank {
+    height: 200px;
+}
